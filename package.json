@@ -1,0 +1,61 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "egg": {
+    "declarations": true
+  },
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "dateformat": "^3.0.3",
+    "egg": "^2.15.1",
+    "egg-alinode": "^2.0.1",
+    "egg-cors": "^2.2.0",
+    "egg-helper": "^1.1.5",
+    "egg-redis": "^2.3.2",
+    "egg-scripts": "^2.11.0",
+    "egg-sequelize": "^4.3.1",
+    "egg-session-redis": "^2.1.0",
+    "egg-validate-plus": "^1.1.6",
+    "jsonkeysort": "^1.0.1",
+    "md5": "^2.2.1",
+    "mysql2": "^1.6.5",
+    "sequelize-cli": "^5.4.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "autod-egg": "^1.1.0",
+    "egg-bin": "^4.11.0",
+    "egg-ci": "^1.11.0",
+    "egg-development": "^2.4.2",
+    "egg-mock": "^3.21.0",
+    "eslint": "^5.13.0",
+    "eslint-config-egg": "^7.1.0"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --port=7001 --daemon --title=egg-server-example --ignore-stderr",
+    "stop": "egg-scripts stop --title=egg-server-example",
+    "dev": "egg-bin dev",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "ci": {
+    "version": "10"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "MIT"
+}
