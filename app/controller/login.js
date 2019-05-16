@@ -11,6 +11,5 @@ class LoginController extends Controller {
     ctx.body = user;
   }
 }
-//需我
 
 module.exports = LoginController;

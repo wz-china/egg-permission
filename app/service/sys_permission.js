@@ -147,7 +147,7 @@ class SysPermissionService extends Service {
    */
   async insert_many_module_list(body) {
     var insert_data = body.insert_data
-    var insert_data = ["117b9b9067d111e99962bbc8a4dd76cb"]
+    // var insert_data = ["117b9b9067d111e99962bbc8a4dd76cb"]
     if (insert_data.length == 0) {
       var res = await this.ctx.model.SysGroupModule.destroy({
         where: {
@@ -444,7 +444,7 @@ class SysPermissionService extends Service {
   async insert_module(body) {
     try {
       if (body.which == "add") {
-        var res = await this.ctx.model.SysGroupModule.create({
+        var res = await this.ctx.model.SysPermissionModule.create({
           id: this.ctx.helper.tool.create_id(),
           name: body.name,
           level: body.level,
